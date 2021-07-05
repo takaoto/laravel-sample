@@ -20,6 +20,19 @@
             </form>
         </div>
     </div>
+    <div class="card bg-light mt-3">
+        <div class="card-header">
+        ファイルアップロードサンプル
+        </div>
+        <div class="card-body">
+            <form action="{{ url('upload') }}" method="POST"  enctype="multipart/form-data">
+                @csrf
+                <input type="file" name="uploadFile" class="form-control" >
+                <br>
+                <button class="btn btn-success">Upload</button>
+            </form>
+        </div>
+    </div>
 </div>
     
 </body>

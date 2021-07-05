@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('importExportView', [SampleController::class, 'importExportView']);
 Route::post('import', [SampleController::class, 'import'])->name('import');
+Route::post('upload', [SampleController::class, 'upload'])->name('upload');

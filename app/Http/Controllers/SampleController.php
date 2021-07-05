@@ -50,6 +50,6 @@ class SampleController extends Controller
             Storage::putFileAs('', $file, $file_name);
         }
 
-        return view('import');
+        return redirect('/importExportView');
     }
 }

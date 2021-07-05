@@ -25,7 +25,7 @@
         ファイルアップロードサンプル
         </div>
         <div class="card-body">
-            <form action="{{ url('upload') }}" method="POST"  enctype="multipart/form-data">
+            <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="file" name="uploadFile" class="form-control" >
                 <br>

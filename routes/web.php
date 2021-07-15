@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('importExportView', [SampleController::class, 'importExportView']);
+Route::get('importExportView', [SampleController::class, 'importExportView'])->middleware('auth');
 Route::post('import', [SampleController::class, 'import'])->name('import');
 Route::post('upload', [SampleController::class, 'upload'])->name('upload');
+
+Route::get('/home', function () {
+    // dd('ログイン成功');
+    return view('home');
+})->middleware('auth');
